@@ -2,7 +2,7 @@
 
 ### Getting Started
 
-1. Create a `[supabase](https://supabase.io) app.
+1. Create a [supabase](https://supabase.io) app.
 
 2. Copy the `.env.example` file to a `.env.local` file and fill in the environment variables of your supabase app.
 
