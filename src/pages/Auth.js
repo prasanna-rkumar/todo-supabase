@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Auth = () => {
+  const [error, setError] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,19 +26,26 @@ const Auth = () => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Your password"
           />
+         {
+            error && (
+              <p>{error}</p>
+            )
+          }
           <div className="Form-submit-container">
             <button className="App-button Form-submit" type="submit" onClick={(e) => {
               e.preventDefault();
             }}>
               Sign in
-          </button>
+            </button>
+          </div>
+          <div className="Form-submit-container">
+            <button className="App-button Form-submit" type="submit" onClick={(e) => {
+              e.preventDefault();
+            }}>
+              Sign up
+            </button>
           </div>
         </form>
-        <button className="App-button Form-submit" type="submit" onClick={(e) => {
-
-}}>
-            Login as Test user
-        </button>
       </div>
     </div>
   );
