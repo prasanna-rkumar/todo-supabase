@@ -31,7 +31,7 @@ const Todos = () => {
         <h2><FcTodoList style={{ position: "relative", top: "0.5rem", paddingRight: "0.25rem" }} />Todos</h2>
         <span>{count} remaining</span>
       </div>
-      <AddTdo setTodos={selectTodos} />
+      <AddTodo setTodos={selectTodos} />
       <div className="List-view">
         {todos && todos.map((todoItem) => (
           <Todo key={todoItem.id} {...todoItem} setTodos={setTodos} />
@@ -43,7 +43,7 @@ const Todos = () => {
 
 export default Todos;
 
-const AddTdo = ({ setTodos }) => {
+const AddTodo = ({ setTodos }) => {
   const [task, setTask] = useState("");
   const onSubmit = (event) => {
     event.preventDefault();
