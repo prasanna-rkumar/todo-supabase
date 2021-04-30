@@ -1,38 +1,162 @@
+:root {
+  --shadow-color: lightblue;
+  --app-transition: all 0.2s;
+}
+
+nav {
+  text-align: right;
+}
+
 .App {
+  margin: auto;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  max-width: 36rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  justify-content: flex-start;
+  font-size: calc(0.9rem + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Todo-card {
+  margin: 0 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-transition {
+  transition: all 0.2s;
+}
+
+.App-border-radius {
+  border-radius: 0.5rem;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.Input-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.Input-field {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.25rem;
+  padding-left: 0.75rem;
+  border: none;
+  outline: none;
+  transition: var(--app-transition);
+}
+
+.App-button {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #fff;
+  box-shadow: 2px 2px var(--shadow-color);
+  color: #282c34;
+  font-size: 1.125rem;
+  outline: none;
+  transition: var(--app-transition);
+}
+
+.Add-button {
+  width: 6rem;
+}
+
+.Input-field:focus, .App-button:hover, .App-button:focus, .List-tile:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px var(--shadow-color);
+}
+
+.App-button:active.App-button:focus {
+  transform: translate(0, 0);
+  box-shadow: 0 0;
+}
+
+.List-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 1.5rem;
+}
+
+.List-tile {
+  background: aliceblue;
+  color: #282c34;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem;
+  font-size: 1.65rem;
+  transition: var(--app-transition);
+}
+
+.List-tile-title {
+  width: 100%;
+  text-align: left;
+}
+
+.List-tile-leading {
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+}
+
+.List-tile-trailing {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.Login-card {
+  padding: 0 2rem;
+}
+
+.Form-container form {
+  text-align: left;
+}
+
+.Form-input {
+  display: block;
+}
+
+.Form-label {
+  font-size: 0.95rem;
+  opacity: 65%;
+  text-align: left;
+}
+
+.Form-submit-container {
+  text-align: center;
+}
+
+.Form-submit {
+  margin-top: 2rem;
+  width: 60%;
+  height: 2.5rem;
+}
+
+.Todo-update-submit {
+  height: 1.75rem;
+  font-size: 1rem;
+  background: white;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 1px 1px 4px 1px #282c3454;
+  cursor: pointer;
+}
+
+.Todo-update-submit:hover {
+  box-shadow: 2px 2px 8px 2px #282c3454;
 }
